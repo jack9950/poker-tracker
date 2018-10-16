@@ -41,12 +41,12 @@ if __name__ == '__main__':
 	try:
 		fileName = sys.argv[1]
 	except IndexError:
-		print("Please enter a csv filename...")
+		print("Please enter a csv file path and filename...")
 		sys.exit()
 
 	# Create the name of the output file
 	filenameBase = os.path.splitext(fileName)[0]
-	currentDate = datetime.now().strftime("%m%d%Y")
+	currentDate = datetime.now().strftime("%Y%m%d")
 	currentTime = time.strftime("%I%M%S")
 	outputFileName = filenameBase + '_processed_at_' + currentDate + '_' + currentTime + '.csv'
 
